@@ -4,5 +4,7 @@
 
 ### Delivery Service
 
+Heroku: https://deliveryservicemy.herokuapp.com/
+
 client side : https://github.com/JuliaBorovets/DeliveryServiceClient \
 server side : https://github.com/JuliaBorovets/DeliveryServiceServer
