@@ -4,5 +4,5 @@
 
 ### Delivery Service
 
-client side : https://github.com/JuliaBorovets/DeliveryServiceClient
+client side : https://github.com/JuliaBorovets/DeliveryServiceClient \
 server side : https://github.com/JuliaBorovets/DeliveryServiceServer
