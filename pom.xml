@@ -113,6 +113,12 @@
     <build>
         <plugins>
 
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.10.0</version>
+            </plugin>
+
             <!-- JaCoCo plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>

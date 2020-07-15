@@ -10374,7 +10374,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "register",
         value: function register(user) {
-          return this.http.post('/', user);
+          return this.http.post('/api', user);
         }
       }, {
         key: "updateUserInfo",

@@ -3818,7 +3818,7 @@ class UserService {
         }));
     }
     register(user) {
-        return this.http.post('/', user);
+        return this.http.post('/api', user);
     }
     updateUserInfo(user) {
         return this.http.put('/api/update', user, {});
