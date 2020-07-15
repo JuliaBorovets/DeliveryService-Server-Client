@@ -3563,9 +3563,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const ADMIN_API_URL = 'http://localhost:8080/api/admin';
-const API_URL = 'http://localhost:8080/api/user/shipments';
-const USER_API_URL = 'http://localhost:8080/api';
 class AdminService {
     constructor(http) {
         this.http = http;
@@ -3578,43 +3575,43 @@ class AdminService {
         });
     }
     findAllPaidOrders() {
-        return this.http.get(API_URL + '/paid', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/paid', { headers: this.headers() });
     }
     findAllShippedOrders() {
-        return this.http.get(API_URL + '/shipped', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/shipped', { headers: this.headers() });
     }
     findAllDeliveredOrders() {
-        return this.http.get(API_URL + '/delivered', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/delivered', { headers: this.headers() });
     }
     shipOrder(id) {
-        return this.http.patch(ADMIN_API_URL + '/to_ship/' + id, {}, { headers: this.headers() });
+        return this.http.patch('/api/admin/to_ship/' + id, {}, { headers: this.headers() });
     }
     deliverOrder(id) {
-        return this.http.patch(ADMIN_API_URL + '/to_deliver/' + id, {}, { headers: this.headers() });
+        return this.http.patch('/api/admin/to_deliver/' + id, {}, { headers: this.headers() });
     }
     receiveOrder(id) {
-        return this.http.patch(ADMIN_API_URL + '/to_receive/' + id, {}, { headers: this.headers() });
+        return this.http.patch('/api/admin/to_receive/' + id, {}, { headers: this.headers() });
     }
     findAllUsers() {
-        return this.http.get(USER_API_URL + '/users', { headers: this.headers() });
+        return this.http.get('/api/users', { headers: this.headers() });
     }
     findUserByLogin(login) {
-        return this.http.get(USER_API_URL + '/find/' + login, { headers: this.headers() });
+        return this.http.get('/api/find/' + login, { headers: this.headers() });
     }
     findAllReceipts() {
-        return this.http.get(ADMIN_API_URL + '/show_all_receipts', { headers: this.headers() });
+        return this.http.get('/api/admin/show_all_receipts', { headers: this.headers() });
     }
     createStatistics() {
-        return this.http.get(ADMIN_API_URL, { headers: this.headers() });
+        return this.http.get('/api/admin', { headers: this.headers() });
     }
     numbersYear() {
-        return this.http.get(ADMIN_API_URL + '/numbersYear', { headers: this.headers() });
+        return this.http.get('/api/admin/numbersYear', { headers: this.headers() });
     }
     earningsYear() {
-        return this.http.get(ADMIN_API_URL + '/earningsYear', { headers: this.headers() });
+        return this.http.get('/api/admin/earningsYear', { headers: this.headers() });
     }
     changeRole(id, role) {
-        return this.http.patch(`${USER_API_URL}/change/${id}/${role}`, {}, { headers: this.headers() });
+        return this.http.patch(`/api/change/${id}/${role}`, {}, { headers: this.headers() });
     }
 }
 AdminService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ factory: function AdminService_Factory() { return new AdminService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); }, token: AdminService, providedIn: "root" });
@@ -3637,7 +3634,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const API_URL = 'http://localhost:8080/api/user/bank';
 class BankService {
     constructor(http) {
         this.http = http;
@@ -3650,19 +3646,19 @@ class BankService {
         });
     }
     createCard(card) {
-        return this.http.post(API_URL, card, { headers: this.headers() });
+        return this.http.post('/api/user/bank', card, { headers: this.headers() });
     }
     findAllCards() {
-        return this.http.get(API_URL, { headers: this.headers() });
+        return this.http.get('/api/user/bank', { headers: this.headers() });
     }
     updateCard(card) {
-        return this.http.patch(API_URL, card, { headers: this.headers() });
+        return this.http.patch('/api/user/bank', card, { headers: this.headers() });
     }
     deleteCard(id) {
-        return this.http.delete(API_URL + '/' + id, { headers: this.headers() });
+        return this.http.delete('/api/user/bank/' + id, { headers: this.headers() });
     }
     pay(receipt) {
-        return this.http.post(API_URL + '/pay', receipt, { headers: this.headers() });
+        return this.http.post('/api/user/bank/pay', receipt, { headers: this.headers() });
     }
 }
 BankService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ factory: function BankService_Factory() { return new BankService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); }, token: BankService, providedIn: "root" });
@@ -3685,7 +3681,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const API_URL = 'http://localhost:8080/api/user/shipments';
 class OrderService {
     constructor(http) {
         this.http = http;
@@ -3698,38 +3693,38 @@ class OrderService {
         });
     }
     findAllOrders() {
-        return this.http.get(API_URL + '/show/all', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/show/all', { headers: this.headers() });
     }
     findNotPaidOrders() {
-        return this.http.get(API_URL + '/show/not_paid', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/show/not_paid', { headers: this.headers() });
     }
     findDeliveredOrders() {
-        return this.http.get(API_URL + '/show/delivered', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/show/delivered', { headers: this.headers() });
     }
     findArchivedOrders() {
-        return this.http.get(API_URL + '/show/archived', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/show/archived', { headers: this.headers() });
     }
     createOrder(order) {
-        return this.http.post(API_URL, order, { headers: this.headers() });
+        return this.http.post('/api/user/shipments', order, { headers: this.headers() });
     }
     findAllTypes() {
-        return this.http.get(API_URL + '/types', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/types', { headers: this.headers() });
     }
     findDestinationsFrom() {
-        return this.http.get(API_URL + '/destinations_from', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/destinations_from', { headers: this.headers() });
     }
     findDestinationsTo() {
-        return this.http.get(API_URL + '/destinations_to', { headers: this.headers() });
+        return this.http.get('/api/user/shipments/destinations_to', { headers: this.headers() });
     }
     findOrderById(id) {
         console.log(id);
-        return this.http.get(API_URL + '/find_order/' + id, { headers: this.headers() });
+        return this.http.get('/api/user/shipments/find_order/' + id, { headers: this.headers() });
     }
     archiveOrder(id) {
-        return this.http.patch(API_URL + `/${id}`, {}, { headers: this.headers() });
+        return this.http.patch(`/api/user/shipments/${id}`, {}, { headers: this.headers() });
     }
     deleteOrder(id) {
-        return this.http.delete(API_URL + `/${id}`, { headers: this.headers() });
+        return this.http.delete(`/api/user/shipments/${id}`, { headers: this.headers() });
     }
 }
 OrderService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ factory: function OrderService_Factory() { return new OrderService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); }, token: OrderService, providedIn: "root" });
@@ -3752,7 +3747,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const API_URL = 'http://localhost:8080/api/user/receipt';
 class ReceiptService {
     constructor(http) {
         this.http = http;
@@ -3765,10 +3759,10 @@ class ReceiptService {
         });
     }
     showAllUserReceipts() {
-        return this.http.get(API_URL, { headers: this.headers() });
+        return this.http.get('/api/user/receipt', { headers: this.headers() });
     }
     findReceiptById(id) {
-        return this.http.get(API_URL + '/' + id, { headers: this.headers() });
+        return this.http.get('api/user/receipt/' + id, { headers: this.headers() });
     }
 }
 ReceiptService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ factory: function ReceiptService_Factory() { return new ReceiptService(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); }, token: ReceiptService, providedIn: "root" });
@@ -3795,7 +3789,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const API_URL = 'http://localhost:8080/api';
 class UserService {
     constructor(http) {
         this.http = http;
@@ -3809,7 +3802,7 @@ class UserService {
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"](user ? {
             Authorization: 'Basic ' + btoa(user.login + ':' + user.password)
         } : {});
-        return this.http.get(API_URL + '/login', { headers }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(response => {
+        return this.http.get('/api/login', { headers }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(response => {
             if (response) {
                 response.password = user.password; // Store pure password.
                 localStorage.setItem('currentUser', JSON.stringify(response));
@@ -3819,16 +3812,16 @@ class UserService {
         }));
     }
     logOut() {
-        return this.http.post(API_URL + '/logout', {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(response => {
+        return this.http.post('/api/logout', {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(response => {
             localStorage.removeItem('currentUser');
             this.currentUserSubject.next(null);
         }));
     }
     register(user) {
-        return this.http.post(API_URL, user);
+        return this.http.post('/', user);
     }
     updateUserInfo(user) {
-        return this.http.put(API_URL + '/update', user, {});
+        return this.http.put('/api/update', user, {});
     }
 }
 UserService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ factory: function UserService_Factory() { return new UserService(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); }, token: UserService, providedIn: "root" });

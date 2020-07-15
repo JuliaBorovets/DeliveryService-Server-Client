@@ -9847,10 +9847,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var ADMIN_API_URL = 'http://localhost:8080/api/admin';
-    var API_URL = 'http://localhost:8080/api/user/shipments';
-    var USER_API_URL = 'http://localhost:8080/api';
-
     var AdminService = /*#__PURE__*/function () {
       function AdminService(http) {
         _classCallCheck(this, AdminService);
@@ -9870,91 +9866,91 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "findAllPaidOrders",
         value: function findAllPaidOrders() {
-          return this.http.get(API_URL + '/paid', {
+          return this.http.get('/api/user/shipments/paid', {
             headers: this.headers()
           });
         }
       }, {
         key: "findAllShippedOrders",
         value: function findAllShippedOrders() {
-          return this.http.get(API_URL + '/shipped', {
+          return this.http.get('/api/user/shipments/shipped', {
             headers: this.headers()
           });
         }
       }, {
         key: "findAllDeliveredOrders",
         value: function findAllDeliveredOrders() {
-          return this.http.get(API_URL + '/delivered', {
+          return this.http.get('/api/user/shipments/delivered', {
             headers: this.headers()
           });
         }
       }, {
         key: "shipOrder",
         value: function shipOrder(id) {
-          return this.http.patch(ADMIN_API_URL + '/to_ship/' + id, {}, {
+          return this.http.patch('/api/admin/to_ship/' + id, {}, {
             headers: this.headers()
           });
         }
       }, {
         key: "deliverOrder",
         value: function deliverOrder(id) {
-          return this.http.patch(ADMIN_API_URL + '/to_deliver/' + id, {}, {
+          return this.http.patch('/api/admin/to_deliver/' + id, {}, {
             headers: this.headers()
           });
         }
       }, {
         key: "receiveOrder",
         value: function receiveOrder(id) {
-          return this.http.patch(ADMIN_API_URL + '/to_receive/' + id, {}, {
+          return this.http.patch('/api/admin/to_receive/' + id, {}, {
             headers: this.headers()
           });
         }
       }, {
         key: "findAllUsers",
         value: function findAllUsers() {
-          return this.http.get(USER_API_URL + '/users', {
+          return this.http.get('/api/users', {
             headers: this.headers()
           });
         }
       }, {
         key: "findUserByLogin",
         value: function findUserByLogin(login) {
-          return this.http.get(USER_API_URL + '/find/' + login, {
+          return this.http.get('/api/find/' + login, {
             headers: this.headers()
           });
         }
       }, {
         key: "findAllReceipts",
         value: function findAllReceipts() {
-          return this.http.get(ADMIN_API_URL + '/show_all_receipts', {
+          return this.http.get('/api/admin/show_all_receipts', {
             headers: this.headers()
           });
         }
       }, {
         key: "createStatistics",
         value: function createStatistics() {
-          return this.http.get(ADMIN_API_URL, {
+          return this.http.get('/api/admin', {
             headers: this.headers()
           });
         }
       }, {
         key: "numbersYear",
         value: function numbersYear() {
-          return this.http.get(ADMIN_API_URL + '/numbersYear', {
+          return this.http.get('/api/admin/numbersYear', {
             headers: this.headers()
           });
         }
       }, {
         key: "earningsYear",
         value: function earningsYear() {
-          return this.http.get(ADMIN_API_URL + '/earningsYear', {
+          return this.http.get('/api/admin/earningsYear', {
             headers: this.headers()
           });
         }
       }, {
         key: "changeRole",
         value: function changeRole(id, role) {
-          return this.http.patch("".concat(USER_API_URL, "/change/").concat(id, "/").concat(role), {}, {
+          return this.http.patch("/api/change/".concat(id, "/").concat(role), {}, {
             headers: this.headers()
           });
         }
@@ -10005,8 +10001,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var API_URL = 'http://localhost:8080/api/user/bank';
-
     var BankService = /*#__PURE__*/function () {
       function BankService(http) {
         _classCallCheck(this, BankService);
@@ -10026,35 +10020,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "createCard",
         value: function createCard(card) {
-          return this.http.post(API_URL, card, {
+          return this.http.post('/api/user/bank', card, {
             headers: this.headers()
           });
         }
       }, {
         key: "findAllCards",
         value: function findAllCards() {
-          return this.http.get(API_URL, {
+          return this.http.get('/api/user/bank', {
             headers: this.headers()
           });
         }
       }, {
         key: "updateCard",
         value: function updateCard(card) {
-          return this.http.patch(API_URL, card, {
+          return this.http.patch('/api/user/bank', card, {
             headers: this.headers()
           });
         }
       }, {
         key: "deleteCard",
         value: function deleteCard(id) {
-          return this.http["delete"](API_URL + '/' + id, {
+          return this.http["delete"]('/api/user/bank/' + id, {
             headers: this.headers()
           });
         }
       }, {
         key: "pay",
         value: function pay(receipt) {
-          return this.http.post(API_URL + '/pay', receipt, {
+          return this.http.post('/api/user/bank/pay', receipt, {
             headers: this.headers()
           });
         }
@@ -10105,8 +10099,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var API_URL = 'http://localhost:8080/api/user/shipments';
-
     var OrderService = /*#__PURE__*/function () {
       function OrderService(http) {
         _classCallCheck(this, OrderService);
@@ -10126,56 +10118,56 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "findAllOrders",
         value: function findAllOrders() {
-          return this.http.get(API_URL + '/show/all', {
+          return this.http.get('/api/user/shipments/show/all', {
             headers: this.headers()
           });
         }
       }, {
         key: "findNotPaidOrders",
         value: function findNotPaidOrders() {
-          return this.http.get(API_URL + '/show/not_paid', {
+          return this.http.get('/api/user/shipments/show/not_paid', {
             headers: this.headers()
           });
         }
       }, {
         key: "findDeliveredOrders",
         value: function findDeliveredOrders() {
-          return this.http.get(API_URL + '/show/delivered', {
+          return this.http.get('/api/user/shipments/show/delivered', {
             headers: this.headers()
           });
         }
       }, {
         key: "findArchivedOrders",
         value: function findArchivedOrders() {
-          return this.http.get(API_URL + '/show/archived', {
+          return this.http.get('/api/user/shipments/show/archived', {
             headers: this.headers()
           });
         }
       }, {
         key: "createOrder",
         value: function createOrder(order) {
-          return this.http.post(API_URL, order, {
+          return this.http.post('/api/user/shipments', order, {
             headers: this.headers()
           });
         }
       }, {
         key: "findAllTypes",
         value: function findAllTypes() {
-          return this.http.get(API_URL + '/types', {
+          return this.http.get('/api/user/shipments/types', {
             headers: this.headers()
           });
         }
       }, {
         key: "findDestinationsFrom",
         value: function findDestinationsFrom() {
-          return this.http.get(API_URL + '/destinations_from', {
+          return this.http.get('/api/user/shipments/destinations_from', {
             headers: this.headers()
           });
         }
       }, {
         key: "findDestinationsTo",
         value: function findDestinationsTo() {
-          return this.http.get(API_URL + '/destinations_to', {
+          return this.http.get('/api/user/shipments/destinations_to', {
             headers: this.headers()
           });
         }
@@ -10183,21 +10175,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "findOrderById",
         value: function findOrderById(id) {
           console.log(id);
-          return this.http.get(API_URL + '/find_order/' + id, {
+          return this.http.get('/api/user/shipments/find_order/' + id, {
             headers: this.headers()
           });
         }
       }, {
         key: "archiveOrder",
         value: function archiveOrder(id) {
-          return this.http.patch(API_URL + "/".concat(id), {}, {
+          return this.http.patch("/api/user/shipments/".concat(id), {}, {
             headers: this.headers()
           });
         }
       }, {
         key: "deleteOrder",
         value: function deleteOrder(id) {
-          return this.http["delete"](API_URL + "/".concat(id), {
+          return this.http["delete"]("/api/user/shipments/".concat(id), {
             headers: this.headers()
           });
         }
@@ -10248,8 +10240,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var API_URL = 'http://localhost:8080/api/user/receipt';
-
     var ReceiptService = /*#__PURE__*/function () {
       function ReceiptService(http) {
         _classCallCheck(this, ReceiptService);
@@ -10269,14 +10259,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "showAllUserReceipts",
         value: function showAllUserReceipts() {
-          return this.http.get(API_URL, {
+          return this.http.get('/api/user/receipt', {
             headers: this.headers()
           });
         }
       }, {
         key: "findReceiptById",
         value: function findReceiptById(id) {
-          return this.http.get(API_URL + '/' + id, {
+          return this.http.get('api/user/receipt/' + id, {
             headers: this.headers()
           });
         }
@@ -10339,8 +10329,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var API_URL = 'http://localhost:8080/api';
-
     var UserService = /*#__PURE__*/function () {
       function UserService(http) {
         _classCallCheck(this, UserService);
@@ -10358,7 +10346,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"](user ? {
             Authorization: 'Basic ' + btoa(user.login + ':' + user.password)
           } : {});
-          return this.http.get(API_URL + '/login', {
+          return this.http.get('/api/login', {
             headers: headers
           }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (response) {
             if (response) {
@@ -10377,7 +10365,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function logOut() {
           var _this52 = this;
 
-          return this.http.post(API_URL + '/logout', {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (response) {
+          return this.http.post('/api/logout', {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (response) {
             localStorage.removeItem('currentUser');
 
             _this52.currentUserSubject.next(null);
@@ -10386,12 +10374,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "register",
         value: function register(user) {
-          return this.http.post(API_URL, user);
+          return this.http.post('/', user);
         }
       }, {
         key: "updateUserInfo",
         value: function updateUserInfo(user) {
-          return this.http.put(API_URL + '/update', user, {});
+          return this.http.put('/api/update', user, {});
         }
       }, {
         key: "currentUserValue",
