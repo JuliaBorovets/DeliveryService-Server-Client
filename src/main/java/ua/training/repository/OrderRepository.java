@@ -9,8 +9,6 @@ import java.util.Optional;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    List<Order> findOrderByOwnerId(Long ownerId);
-
     List<Order> findOrderByOwner_Login(String login);
 
     List<Order> findByStatusAndOwner_Login(Status status, String login);
