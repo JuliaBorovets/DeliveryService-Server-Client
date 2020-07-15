@@ -1,0 +1,27 @@
+language: java
+jdk: openjdk8
+
+dist: trusty
+
+before_install:
+  - chmod +x mvnw
+
+cache:
+  directories:
+    - $HOME/.m2
+
+services: mysql
+
+before_script:
+  - mysql -e 'DROP DATABASE IF EXISTS db_spring_rest;'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS db_spring_rest;'
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  email:
+    recipients:
+      - juliaborovets2001@gmail.com
+    on_success: always
+    on_failure: always

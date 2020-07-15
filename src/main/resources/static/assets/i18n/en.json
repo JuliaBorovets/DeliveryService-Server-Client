@@ -1,0 +1,159 @@
+{
+  "GENERAL": {
+    "INFO1": "The unregistered user has access to:",
+    "INFO2": "- home page overview",
+    "INFO3": "The registered user has access to:",
+    "INFO4": "- creating a new order (description, weight, type, city from and city to)",
+    "INFO5": "- the order viewing, filtering, searching, receipt showing, deleting and archiving",
+    "INFO6": "- all receipts, bank card management (add, delete and edit)",
+    "INFO7": "- personal information (view, edit)",
+    "INFO8": "Admin has access to:",
+    "INFO9": "- order management (to ship, to deliver, to receive)",
+    "INFO10": "- view, search, and change user roles",
+    "INFO11": "- statistics",
+    "INFO12": "To test:",
+    "INFO13": "login : user, password : user1111",
+    "INFO14": "login : admin, password: admin1111",
+    "ABOUT_US": "About us",
+    "ADMIN": "Admin page",
+    "ADMIN_PAGE": "Orders",
+    "USER_LIST": "Users",
+    "RECEIPT_LIST": "Receipts",
+    "STATISTICS": "Statistics",
+    "NEW_ORDER": "New order",
+    "MY_ORDERS": "My orders",
+    "BANK": "Bank",
+    "USER_INFO": "User info",
+    "LOGOUT": "Logout",
+    "LOG_IN": "Log in",
+    "SIGN_UP": "Sign up",
+    "COPYRIGHTS": "Copyright © 2020"
+  },
+  "ORDERS": {
+    "SHOW_ALL": "All",
+    "SHOW_NOT_PAID": "Not paid",
+    "SHOW_DELIVERED": "Delivered",
+    "SHOW_ARCHIVED": "Archived",
+    "SEARCH": "search by id",
+    "STATUS": "Status",
+    "TYPE": "Type",
+    "WEIGHT": "Weight",
+    "DESTINATION": "Destination",
+    "DESCRIPTION": "Description",
+    "SHIPPING_DATE": "Shipping date",
+    "DELIVERY_DATE": "Delivery date",
+    "SHIPPING_PRICE": "Shipping price",
+    "SHOW_RECEIPT": "Show receipt",
+    "PAY": "Pay",
+    "ARCHIVE": "Archive",
+    "DELETE": "Delete",
+    "STATUS_PAID": "Paid",
+    "STATUS_NOT_PAID": "Not paid",
+    "STATUS_SHIPPED": "Shipped",
+    "STATUS_DELIVERED": "Delivered",
+    "STATUS_RECEIVED": "Received",
+    "STATUS_ARCHIVED": "Archived"
+  },
+  "ADMIN": {
+    "ORDERS": {
+      "SHIP": "Ship",
+      "DELIVER": "Deliver",
+      "RECEIVE": "Receive",
+      "SEARCH": "search by id"
+    },
+    "USERS": {
+      "SEARCH": "Search by login",
+      "FIRST_NAME": "First name",
+      "LAST_NAME": "Last name",
+      "LOGIN": "Login",
+      "EMAIL": "Email",
+      "ROLE": "Role",
+      "CHANGE_ROLE": "Change role",
+      "ROLE_USER": "User",
+      "ROLE_ADMIN": "Admin"
+    },
+    "RECEIPTS": {
+      "SEARCH": "Search by ID",
+      "ORDER_ID": "Order",
+      "PRICE": "Price",
+      "USER_ID": "User",
+      "BANK_ID": "Bank card",
+      "CREATION": "Date"
+    },
+    "STATISTICS": {
+      "EARNINGS_LAST_MONTH": "Earnings (month)",
+      "EARNINGS_YEAR": "Earnings (year)",
+      "DELIVERS_LAST_MONTH": "Delivers (month)",
+      "DELIVERS_YEAR": "Delivers (year)",
+      "NUMBER_ORDERS": "Number of orders",
+      "ANNUAL_INCOME": "Annual income"
+    }
+  },
+  "NEW_ORDER": {
+    "NEW_ORDER": "New order",
+    "DESCRIPTION": "Description : ",
+    "WEIGHT": "Weight : ",
+    "TYPE": "Type : ",
+    "DESTINATION_FROM": "City from : ",
+    "DESTINATION_TO": "City to : ",
+    "SUBMIT": "Create"
+  },
+  "BANK": {
+    "NEW_CARD": "New card",
+    "RECEIPTS": "Receipts",
+    "CREDIT_CARD": "Credit card",
+    "CARD_NUMBER": "Card number",
+    "EXPIRATION": "Expiration",
+    "MONTH": "Month",
+    "YEAR": "Year",
+    "CCV_INFO": "Three-digits code on the back of your card",
+    "CCV": "CCV",
+    "CONFIRM": "Confirm",
+    "EDIT_CARD": "Edit",
+    "BALANCE": "Balance"
+  },
+  "RECEIPTS": {
+    "SEARCH": "Search by ID",
+    "ORDER": "Order",
+    "PRICE": "Price",
+    "USER": "User",
+    "BANK_CARD": "Bank card",
+    "DATE": "Date"
+  },
+  "USER": {
+    "INFO": "User info",
+    "LOGIN": "Login",
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "EMAIL": "e-mail",
+    "ROLE": "Role",
+    "EDIT": "Edit",
+    "PASSWORD": "Password",
+    "SUBMIT": "Submit",
+    "CLOSE": "Close"
+  },
+  "LOGIN": {
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "LOGIN": "Login"
+  },
+  "REGISTER": {
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "LOGIN": "Login",
+    "EMAIL": "e-mail",
+    "PASSWORD": "Password",
+    "SIGN_UP": "Sign up"
+  },
+  "ERROR_MESSAGES": {
+    "USER_ALREADY_EXISTS": "Username is already exist",
+    "PASSWORD": "Not valid",
+    "ALL": "Something went wrong",
+    "USERNAME_PASSWORD": "Username or password is incorrect.",
+    "INCORRECT": "Not valid",
+    "NOT_FOUND": " Oops! We can't seem to find the page you are looking for.",
+    "CONFIRM": "Are you sure?",
+    "NO_MONEY": "Not enough money",
+    "UNAUTHORIZED": "Unauthorized! Access to this resource is denied."
+  }
+}
