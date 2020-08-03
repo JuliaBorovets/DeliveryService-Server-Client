@@ -1,6 +1,6 @@
 
-[![Build Status](https://travis-ci.com/JuliaBorovets/DeliveryServiceServer.svg?branch=master)](https://travis-ci.com/JuliaBorovets/DeliveryServiceServer)
-[![codecov](https://codecov.io/gh/JuliaBorovets/DeliveryServiceServer/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaBorovets/DeliveryServiceServer)
+[![Build Status](https://travis-ci.com/JuliaBorovets/DeliveryService-Server-Client.svg?branch=master)](https://travis-ci.com/JuliaBorovets/DeliveryService-Server-Client)
+[![codecov](https://codecov.io/gh/JuliaBorovets/DeliveryService-Server-Client/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaBorovets/DeliveryService-Server-Client)
 
 ### Delivery Service
 
